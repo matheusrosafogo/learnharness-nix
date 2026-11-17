@@ -17,9 +17,12 @@ nix build
 nix run .
 ```
 
-## Publicar no GitHub
+## Repositório publicado
 
-O `.deb` não é versionado. O repositório contém apenas:
+O repositório remoto é
+[matheusrosafogo/learnharness-nix](https://github.com/matheusrosafogo/learnharness-nix)
+(público, branch `main`). O `.deb` não é versionado. O repositório contém
+apenas:
 
 ```
 flake.nix
@@ -30,19 +33,14 @@ README.md
 .gitignore
 ```
 
-Para publicar:
+Para enviar alterações futuras:
 
 ```bash
 cd /home/matheus/Projects/learnharness-nix
-git init -b main
-git add .
 git status   # confirme que nenhum .deb aparece na lista
-
-git commit -m "LearnHarness 0.6.1 para Nix"
-
-# criar o repositório remoto com o gh
-gh repo create matheusrosafogo/learnharness-nix \
-  --public --source=. --remote=origin --push
+git add .
+git commit -m "Atualiza LearnHarness"
+git push
 ```
 
 ## Usar como input de flake
