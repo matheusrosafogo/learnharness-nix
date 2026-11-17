@@ -1,0 +1,5 @@
+# Artefatos locais e de build.
+result
+result-*
+.direnv
+*.deb
